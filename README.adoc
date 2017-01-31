@@ -4,8 +4,8 @@ This repo demonstrates two methods of having a binary when using lumo. Both have
 
 Both have failing code commented out. They should be run from the `lumo-require` directory, as running them from inside the particular directory (e.g. `./bin.cljs`) will find the local node_modules directory.
 
-::plainnode:: is an example of the code in plain ol' js. It's the ideal functionality.
+plainnode:: is an example of the code in plain ol' js. It's the ideal functionality.
 
-::nodebin:: is an example of using the `#!` method. Nothing in this example works. Although, I'd expect it to behave like plainnode.
+nodebin:: is an example of using the `#!` method. Nothing in this example works. Although, I'd expect it to behave like plainnode.
 
-::calllumo:: is an example of using a wrapper script to call out to lumo and include the directory of the script as the classpath for lumo. In this example impl can be found, but `node_modules` becomes relative to the directory of the caller, and therefore cannot be found. There is a hack workaround which involves locating the node_modules of this directory, and setting the environment variable of `NODE_PATH`, this seems https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders[strongly discouraged based on docs I've read]. I discovered it trying to hack around nodebin.
+calllumo:: is an example of using a wrapper script to call out to lumo and include the directory of the script as the classpath for lumo. In this example impl can be found, but `node_modules` becomes relative to the directory of the caller, and therefore cannot be found. There is a hack workaround which involves locating the node_modules of this directory, and setting the environment variable of `NODE_PATH`, this seems https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders[strongly discouraged based on docs I've read]. I discovered it trying to hack around nodebin.
