@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+scriptdir="$(npm -g root)/calllumo"
+
+# Doesn't work, directory is wrong:
+#lumo -c $scriptdir "$scriptdir/main.cljs" $*
+
+NODE_PATH="$scriptdir/node_modules" lumo -c $scriptdir "$scriptdir/main.cljs" $*
